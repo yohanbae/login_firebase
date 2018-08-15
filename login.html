@@ -1,0 +1,21 @@
+<div>
+	Please login here!
+	<form name="myForm" novalidate>
+		<h2>Please Sign in</h2>
+		<div class="form-group" ng-class="{'has-error': 'myForm.email.$touched && myForm.email.$invalid'}">
+			<label for="email">Email Address:</label>
+			<input name="email" type="email" placeholder="User Email" class="form-control" ng-model="user.email" required>
+			<small class="help-block" ng-show="myForm.email.$touched && myForm.email.$invalid">Enter a valid Email Address</small>
+		</div>
+
+		<div class="form-group" ng-class="{'has-error': 'myForm.password.$touched && myForm.password.$invalid'}">
+			<input name="password" ng-model="user.password" type="password" class="form-control" placeholder="User Password" required>
+			<small class="help-block" ng-show="myForm.password.$touched && myForm.password.$invalid">Enter a valid password</small>
+		</div>
+		<button ng-click="handleLogin()">Login</button>
+		<button ng-click="addStudent()">add TEST</button>
+		{{thename}}
+				<a href="#!/register">Sign up</a>
+
+	</form>
+</div>
